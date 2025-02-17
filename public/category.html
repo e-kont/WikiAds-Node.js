@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/category.js"></script>
+        <script id="category-ads-template" type="text/x-handlebars">
+            {{#each ads}}
+            <div class="ad" id="ad{{id}}" data-ad_id ="{{id}}" data-ad_title = "{{title}}" data-ad_img = "{{images.[0]}}" data-ad_description="{{description}}" data-ad_cost="{{cost}}" data-subcategory_id="{{subcategory_id}}">
+                <h2>{{title}}</h2>
+                <img src="https://wiki-ads.onrender.com/{{images.[0]}}">
+                <h3>Κωδικός αγγελίας: {{id}}</h3>
+                <p>{{description}}</p>
+                <h4>{{cost}}€</h4>
+                <button type="button" class="wishlist" id="wishlist_{{id}}" title="Προσθήκη στα αγαπημένα">&#10084;</button>
+            </div>
+            {{/each}}
+        </script>
+        <script id="subcategory-filters-template" type="text/x-handlebars">
+            {{#each subcategories}}
+            <input type="radio" id="{{title}}" name="filter" value="{{id}}">
+            <label for="{{title}}">{{title}}</label><br>
+            {{/each}}
+        </script>
+    </head>
+
+    <body>
+        <div class="login">
+            <details>
+                <summary id="sign-in"><i class="fa fa-sign-in"></i> Είσοδος χρήστη</summary>
+                <form name="login" method="post" action="/login" autocomplete="on">
+                    <label for="username">Όνομα χρήστη</label><br>
+                    <input type="text" id="username" name="username" required><br>
+                    <label for="password">Κωδικός πρόσβασης</label><br>
+                    <input type="password" id="password" name="password" required><br>
+                    <input type="submit" value="Είσοδος">
+                </form>
+            </details>
+            <h5 id="welcome-user"><i class="fa fa-user"></i> </h5>
+            <a id="view-favorites" href="#">&hearts; Λίστα αγαπημένων</a>
+        </div>
+        <h1 id="categoryTitle"></h1>
+        <div class="filters">
+            <details>
+                <summary><i class="fa fa-filter"></i> Φίλτρα</i></summary>
+                <form id="filters">
+                    <input type="radio" id="all" name="filter" value="0" checked>
+                    <label for="all">Όλα</label><br>
+                </form>
+            </details>
+        </div>
+        <section class="shop" id="shop"></section>
+    </body>
+</html>

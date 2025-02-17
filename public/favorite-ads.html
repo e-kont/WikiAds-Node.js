@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <title>Αγαπημένα</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/favorite-ads.js"></script>
+    <script id="favorite-ads-template" type="text/x-handlebars">
+        {{#each ads}}
+        <h2>{{title}}</h2>
+        <img src="https://wiki-ads.onrender.com/{{img}}">
+        <h3>Κωδικός αγγελίας: {{id}}</h3>
+        <p>{{description}}</p>
+        <h4>{{cost}}€</h4>
+        {{/each}}
+    </script>
+</html>
+
+<body>
+    <h1 id="userFavorites"></h1>
+    <section class="shop" id="favorites"></section>
+</body>

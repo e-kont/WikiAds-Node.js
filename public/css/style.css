@@ -1,0 +1,180 @@
+body{
+    background-color: cornsilk ;
+}
+
+h1 {
+    font-size: 125%;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+h1, form, .login a {
+    color: darkslategrey;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 100%;
+    margin-bottom: 5px;
+    color: brown;
+    clear: left;
+}
+
+h3 {
+    font-size: 15px;
+    color: dimgrey;
+}
+
+table, p, h2, h3, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table, p {
+    color: #383838;
+}
+
+.shop p{
+    font-size: 15px;
+    margin-top: 8px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.section{
+    padding: 100px 8%;
+}
+
+.shop{
+    margin-left: 20px;
+    width: 80%;
+}
+
+h4{
+    font-size: 25px;
+    font-family: Cambria;
+    color:  teal;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+#shop img{
+    float: left;
+    margin-bottom: 30px;
+    margin-top: 5px;
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    font-size: 12px;
+    background-color: ivory;
+}
+
+th, td {
+    padding: 10px;
+    width: 100px;
+    border: 2px solid;
+    border-color: darkgray;
+}
+
+.shop img {
+    width: 25%;
+    height: 25%;
+    margin-right: 15px;
+}
+
+.wishlist {
+    font-size: 32px;
+    background-color: transparent;
+    border: none;
+    float: right;
+    color: black;
+}
+
+.wishlist:hover{
+    -webkit-text-stroke: 3px lightgrey;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+form {
+    background-color: azure;
+    width: fit-content;
+    border: 3px double;
+    border-color: grey;
+    padding: 10px;
+}
+
+.login {
+    float: right;
+    font-size: 13px;
+}
+
+.login summary, .login h5 {
+    text-align: right;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    color: darkolivegreen;
+}
+
+.login h5, .login a {
+    display: none;
+}
+
+.login summary:hover, .login a:hover {
+    color: chocolate;
+    cursor: pointer;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#category-list .category-container img{
+    height: 150px;
+    width: 150px;
+    
+    margin-right: 20px;
+    border-radius: 10%;
+    opacity: 0.6;
+}
+
+#category-list img:hover{
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.9s;
+    transform: translateY(-5px);
+}
+
+#category-list .category-container{
+    display: block;
+    margin-left: 40px;
+    margin-right: auto;
+}
+
+#subcategory-list {
+    font-size: 12px;
+    list-style-type: none;
+    line-height: 2;
+}
+
+#subcategory-list a {
+    color: darkgrey;
+}
+
+.filters {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #383838;
+    font-size: 13px;
+}
+
+.filters summary:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+summary {
+    list-style-type: none;
+}

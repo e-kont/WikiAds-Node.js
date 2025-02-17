@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Αρχική</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="js/main.js"></script>
+    <script id="index-template" type="text/x-handlebars-template">
+        {{#each categories}}
+            <div class="category-container">
+                <h3>{{title}}</h3>
+                <a href="category.html?id={{id}}">
+                    <img src="https://wiki-ads.onrender.com/{{img_url}}", alt="{{title}}" >
+                    
+                </a>
+            </div>
+        {{/each}}
+    </script>
+    <script id="subcategory-list-template" type="text/x-handlebars-template">
+        {{#each subcategories}}
+        <li><a href="subcategory.html?id={{id}}">{{title}}</a></li>
+        {{/each}}
+    </script>
+</head>
+
+<body>
+    <h1 id="indexTitle">Κατηγορίες Αγγελιών</h1>
+    
+    <div id="category-list"></div>
+    <ul id="subcategory-list"></ul>
+  
+</body>
+</html>
